@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #1b1b1b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #e01c75; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #1b1b1b;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #e01c75;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #444444;  /* The default color of the main navmenu links */
-  --nav-hover-color: #000000; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #e8259d; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #444444;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #000000;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #444444;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #e8259d;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1747,7 +1759,7 @@ section,
 
 .header {
   background-color: white;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   padding-top: 20px !important;
   padding-bottom: 20px !important;
 }
@@ -1770,108 +1782,131 @@ section,
 
 /* Class to hide the header */
 #sticky-header.hide-header {
-  top: -105px; /* exactly the header height you're using */
+  top: -105px;
+  /* exactly the header height you're using */
 }
 
 /* Add/Modify in your CSS file */
 
 /* 1. Ensure the overall card structure allows for proper alignment and expansion */
 .member {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Important for aligning the bottoms of the cards */
-    background-color: #fff; /* Explicitly set white background for the card area if it's not already */
-    /* REMOVE any borders, shadows, or rounded corners added in previous suggestions if you don't want them */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Important for aligning the bottoms of the cards */
+  background-color: #fff;
+  /* Explicitly set white background for the card area if it's not already */
+  /* REMOVE any borders, shadows, or rounded corners added in previous suggestions if you don't want them */
 }
 
 /* 2. Control the image size and fit */
 .member .pic {
-    height: 250px; /* **ADJUST THIS VALUE for the main image height** */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* REMOVE any top-left/top-right border-radius added in previous suggestions if you don't want them */
+  height: 250px;
+  /* **ADJUST THIS VALUE for the main image height** */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* REMOVE any top-left/top-right border-radius added in previous suggestions if you don't want them */
 }
 
 .member .pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This is crucial for uniform image appearance */
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* This is crucial for uniform image appearance */
+  object-position: center;
 }
 
 /* 3. Control the text box and its position relative to the image */
 .member .member-info {
-    flex-grow: 1; /* Allows this section to expand and align card bottoms */
-    padding: 20px; /* Keep internal padding around the text */
-    text-align: left; /* Ensure text is left-aligned */
+  flex-grow: 1;
+  /* Allows this section to expand and align card bottoms */
+  padding: 20px;
+  /* Keep internal padding around the text */
+  text-align: left;
+  /* Ensure text is left-aligned */
 
-    /* ***** KEY CHANGES FOR YOUR REQUESTS BELOW ***** */
+  /* ***** KEY CHANGES FOR YOUR REQUESTS BELOW ***** */
 
-    /* A. Ensure text color is dark/black */
-    color: #333; /* Explicitly set a very dark gray for all text in this box */
-    /* Or use #000 if you want pure black */
+  /* A. Ensure text color is dark/black */
+  color: #333;
+  /* Explicitly set a very dark gray for all text in this box */
+  /* Or use #000 if you want pure black */
 
-    /* B. Increase space BETWEEN the image and the text box */
-    margin-top: 100px; /* **ADJUST THIS VALUE to move the text box down from the image** */
-    /* Previous suggestions had 15px, increasing it to 30px for "more" */
+  /* B. Increase space BETWEEN the image and the text box */
+  margin-top: 100px;
+  /* **ADJUST THIS VALUE to move the text box down from the image** */
+  /* Previous suggestions had 15px, increasing it to 30px for "more" */
 
-    /* C. Ensure headings are also dark, as they might inherit a different color */
-    /* This overrides the .member-info color for h4 to be safe */
-    /* We are only changing color to ensure it's dark, not to a specific 'new' color */
+  /* C. Ensure headings are also dark, as they might inherit a different color */
+  /* This overrides the .member-info color for h4 to be safe */
+  /* We are only changing color to ensure it's dark, not to a specific 'new' color */
 }
 
 .member .member-info h4 {
-    margin-bottom: 10px; /* Space between title and description */
-    color: #111; /* Explicitly set a very dark gray/near black for the heading */
-    /* Ensure font-size remains as per your original template */
-    /* font-size: 1.2em; /* Example if needed, but try to avoid changing fonts */
+  margin-bottom: 10px;
+  /* Space between title and description */
+  color: #111;
+  /* Explicitly set a very dark gray/near black for the heading */
+  /* Ensure font-size remains as per your original template */
+  /* font-size: 1.2em; /* Example if needed, but try to avoid changing fonts */
 }
 
 .member .member-info span {
-    display: block; /* Ensure full paragraphs show and flow naturally */
-    overflow: visible;
-    text-overflow: clip;
-    line-height: 1.6; /* Good for readability */
-    color: #444; /* Explicitly set a dark gray for the description text */
-    /* Ensure font-size remains as per your original template */
-    /* font-size: 0.95em; /* Example if needed, but try to avoid changing fonts */
+  display: block;
+  /* Ensure full paragraphs show and flow naturally */
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.6;
+  /* Good for readability */
+  color: #444;
+  /* Explicitly set a dark gray for the description text */
+  /* Ensure font-size remains as per your original template */
+  /* font-size: 0.95em; /* Example if needed, but try to avoid changing fonts */
 }
 
 
 /* Responsive adjustments for overall layout (keep existing ones) */
 @media (max-width: 991px) {
-    .col-lg-4.col-md-6 {
-        margin-bottom: 30px;
-    }
+  .col-lg-4.col-md-6 {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 767px) {
-    .member .pic {
-        height: 180px; /* Adjust image height for mobile */
-    }
-    .member .member-info {
-        padding: 15px; /* Adjust padding for mobile */
-        margin-top: 20px; /* Adjust margin-top for mobile if needed */
-    }
-    .member .member-info h4 {
-        font-size: 1.1em;
-    }
-    .member .member-info span {
-        font-size: 0.9em;
-    }
+  .member .pic {
+    height: 180px;
+    /* Adjust image height for mobile */
+  }
+
+  .member .member-info {
+    padding: 15px;
+    /* Adjust padding for mobile */
+    margin-top: 20px;
+    /* Adjust margin-top for mobile if needed */
+  }
+
+  .member .member-info h4 {
+    font-size: 1.1em;
+  }
+
+  .member .member-info span {
+    font-size: 0.9em;
+  }
 }
 
 /* Base .btn-see-more for Testimonials (and any other default buttons) */
 .btn-see-more {
   font-family: var(--heading-font, sans-serif);
   font-weight: 600;
-  font-size: 18px; /* Original size for testimonial button */
+  font-size: 18px;
+  /* Original size for testimonial button */
   letter-spacing: 1px;
   text-transform: uppercase;
   display: inline-block;
-  padding: 10px 40px; /* Original padding for testimonial button */
+  padding: 10px 40px;
+  /* Original padding for testimonial button */
   border-radius: 50px;
   transition: 0.5s;
   cursor: pointer;
@@ -1888,13 +1923,16 @@ section,
 }
 
 /* Utility classes - keep these if not from Bootstrap */
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
 
 /* Testimonials Section Specific Styling */
 .testimonials .swiper-wrapper {
   justify-content: center;
   align-items: center;
 }
+
 @media (min-width: 1200px) {
   .testimonials .swiper-slide {
     max-width: calc(33.333% - 10px);
@@ -1903,11 +1941,13 @@ section,
     flex-grow: 0;
   }
 }
+
 @media (max-width: 1199px) {
   .testimonials .swiper-slide {
     width: 100% !important;
   }
 }
+
 .testimonials .testimonial-item {
   text-align: center;
 }
@@ -1939,54 +1979,36 @@ section,
 
 .leased-banner {
   position: absolute;
-  top: 150px; /* Adjusted slightly up from 20px, fine-tune as needed */
-  right: -35px; /* <-- ADJUST THIS VALUE */
-  /*
-     Explanation for 'right' value:
-     - Negative value (e.g., -5px, -10px): Moves the banner slightly OUTSIDE the right edge.
-       This can create a sharper corner.
-     - Positive value (e.g., 0px, 5px, 10px): Moves the banner INWARD from the right edge.
-       '0px' aligns its right edge with the card's right edge before rotation.
-
-     Start with -5px or 0px and then experiment.
-  */
-  background-color: #d11c5e; /* Hot pink background */
-  color: white; /* White text */
-  padding: 12px 100px; /* Adjust padding to make the banner wider */
+  top: 150px;
+  right: -35px;
+  background-color: #d11c5e;
+  color: white;
+  padding: 12px 100px;
   font-family: var(--heading-font, sans-serif);
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  z-index: 10; /* Ensure it's above other card content */
-  transform: rotate(45deg); /* Rotate for a diagonal banner effect */
-  transform-origin: 100% 0%; /* Rotate from the top-right corner */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
+  z-index: 10;
+  transform: rotate(45deg);
+  transform-origin: 100% 0%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sold-banner {
   position: absolute;
-  top: 150px; /* Adjusted slightly up from 20px, fine-tune as needed */
-  right: -55px; /* <-- ADJUST THIS VALUE */
-  /*
-     Explanation for 'right' value:
-     - Negative value (e.g., -5px, -10px): Moves the banner slightly OUTSIDE the right edge.
-       This can create a sharper corner.
-     - Positive value (e.g., 0px, 5px, 10px): Moves the banner INWARD from the right edge.
-       '0px' aligns its right edge with the card's right edge before rotation.
-
-     Start with -5px or 0px and then experiment.
-  */
-  background-color: #d11c5e; /* Hot pink background */
-  color: white; /* White text */
-  padding: 12px 125px; /* Adjust padding to make the banner wider */
+  top: 150px;
+  right: -55px;
+  background-color: #d11c5e;
+  color: white;
+  padding: 12px 125px;
   font-family: var(--heading-font, sans-serif);
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  z-index: 10; /* Ensure it's above other card content */
-  transform: rotate(45deg); /* Rotate for a diagonal banner effect */
-  transform-origin: 100% 0%; /* Rotate from the top-right corner */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
+  z-index: 10;
+  transform: rotate(45deg);
+  transform-origin: 100% 0%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #services .service-item ul {
@@ -2001,8 +2023,9 @@ section,
 }
 
 #services .service-item ul li {
-    font-weight: normal !important;
-    font-size: 14px !important; /* Adjust this value if needed */
+  font-weight: normal !important;
+  font-size: 14px !important;
+  /* Adjust this value if needed */
 }
 
 .faint-stars {
@@ -2011,7 +2034,8 @@ section,
 }
 
 .market-insights ul {
-  list-style-type: disc; /* or none if you prefer */
+  list-style-type: disc;
+  /* or none if you prefer */
   padding-left: 20px;
   line-height: 1.6;
 }
@@ -2019,7 +2043,8 @@ section,
 .market-insights li {
   margin-bottom: 15px;
   font-size: 1rem;
-  color: #333; /* adjust for readability */
+  color: #333;
+  /* adjust for readability */
 }
 
 /* Header images container */
@@ -2055,41 +2080,54 @@ section,
 .logo-img {
   width: 140px;
   margin-top: 0px;
+  margin-left: 7px;
 }
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
 
   .profile-container {
-  width: 70px;   /* slightly smaller */
-  height: 60px;  /* slightly smaller */
-  padding-top: 5px;
-  margin-top: 5px;
-  margin-bottom: -3px;
-}
+    width: 70px;
+    /* slightly smaller */
+    height: 60px;
+    /* slightly smaller */
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: -3px;
+  }
 
-.profile-img {
-  width: 100%;        /* fill container width */
-  height: 100%;       /* fill container height */
-  object-fit: cover;  /* keeps aspect ratio, crops if necessary */
-  border-radius: 8px; /* keeps corners rounded */
-  transform: scale(1.4); /* zoom in 10% */
-  transform-origin: center; /* zoom from center */
-  margin-top: 0px;
-}
-.logo-img {
-  width: 70px;     /* smaller width */
-  height: auto;    /* keeps aspect ratio */
-  margin-top: 2px;
-  margin-bottom: -10px;
-  margin-left: 7px;
-}
+  .profile-img {
+    width: 100%;
+    /* fill container width */
+    height: 100%;
+    /* fill container height */
+    object-fit: cover;
+    /* keeps aspect ratio, crops if necessary */
+    border-radius: 8px;
+    /* keeps corners rounded */
+    transform: scale(1.4);
+    /* zoom in 10% */
+    transform-origin: center;
+    /* zoom from center */
+    margin-top: 0px;
+  }
+
+  .logo-img {
+    width: 70px;
+    /* smaller width */
+    height: auto;
+    /* keeps aspect ratio */
+    margin-top: 2px;
+    margin-bottom: -10px;
+    margin-left: 7px;
+  }
 
 }
 
 /* Sitename container */
 .sitename {
-  font-size: 30px;       /* default large-screen size */
+  font-size: 30px;
+  /* default large-screen size */
   line-height: 1.2;
   margin: 0;
   font-weight: 700;
@@ -2112,12 +2150,15 @@ section,
 @media screen and (max-width: 768px) {
   .sitename {
     margin-top: 0px;
-    font-size: 20px;    /* smaller title */
+    font-size: 20px;
+    /* smaller title */
   }
 
   .sitename .slogan {
-    font-size: 10px;    /* smaller slogan text */
-    margin-top: 0;      /* reduce spacing */
+    font-size: 10px;
+    /* smaller slogan text */
+    margin-top: 0;
+    /* reduce spacing */
   }
 
   .header-images {
@@ -2126,21 +2167,24 @@ section,
 }
 
 .header .sitename {
-  font-size: 30px;  /* large screens */
+  font-size: 30px;
+  /* large screens */
 }
 
 @media screen and (max-width: 768px) {
 
   .header .sitename {
     font-size: 15px !important;
-    padding-top: 8px;            /* pushes title down */
+    padding-top: 8px;
+    /* pushes title down */
   }
 }
 
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     position: absolute;
-    top: 65px;   /* ~height of top row + spacing */
+    top: 65px;
+    /* ~height of top row + spacing */
     right: 15px;
     font-size: 28px;
     cursor: pointer;
@@ -2153,28 +2197,42 @@ section,
 }
 
 .main {
-  padding-top: 105px; /* default for desktop */
+  padding-top: 105px;
+  /* default for desktop */
 }
 
 @media screen and (max-width: 768px) {
   .main {
-    padding-top: 15px; /* smaller header on mobile */
+    padding-top: 15px;
+    /* smaller header on mobile */
   }
 }
-.about-page, .services-page, .properties-page, .contact-page {
-  padding-top: 55px; /* default for desktop */
+
+.about-page,
+.services-page,
+.properties-page,
+.contact-page {
+  padding-top: 55px;
+  /* default for desktop */
 }
 
 @media screen and (max-width: 768px) {
-  .about-page, .services-page, .properties-page, .contact-page {
-    padding-top: 55px; /* smaller header on mobile */
+
+  .about-page,
+  .services-page,
+  .properties-page,
+  .contact-page {
+    padding-top: 55px;
+    /* smaller header on mobile */
   }
 }
 
 /* Default for desktop */
 .neighbourhood-img {
-  width: 350px;  /* same as before, but flexible */
-  height: 200px;      /* keeps aspect ratio */
+  width: 350px;
+  /* same as before, but flexible */
+  height: 200px;
+  /* keeps aspect ratio */
   margin-top: -20px;
   margin-bottom: 10px;
 }
@@ -2182,7 +2240,9 @@ section,
 /* Mobile adjustments */
 @media screen and (max-width: 768px) {
   .neighbourhood-img {
-    max-width: 100%;  /* never exceed container */
-    margin-top: -10px; /* optional: reduce spacing */
+    max-width: 100%;
+    /* never exceed container */
+    margin-top: -10px;
+    /* optional: reduce spacing */
   }
 }
