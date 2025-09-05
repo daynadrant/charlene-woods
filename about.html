@@ -31,11 +31,12 @@
 
 </head>
 
-<body class="about-page" style="padding-top: 160px;">
+<body class="about-page">
 
   <div id="sticky-header"
     style="position: fixed; top: 0; width: 100%; z-index: 9999; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
 
+    
     <header id="header" class="header fixed-top"
       style="background-color: #fff; border-bottom: 1px solid #ddd; z-index: 9999; width: 100%; padding: 8px 0 0 0;">
 
@@ -74,25 +75,24 @@
           <!-- Logo + Name -->
           <a href="index.html" class="logo d-flex align-items-center"
             style="gap: 30px; text-decoration: none; align-items: flex-start;">
-            <!-- Profile + RLP stacked vertically -->
-            <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: -15px;">
-              <div
-                style="width: 140px; height: 120px; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center; padding-top: 10px;  margin-top: 10px;">
-                <img src="assets/img/woods-profile.jpeg" alt="Profile"
-                  style="width: 300px; height: 200px; object-fit: cover;">
+
+            <div class="header-images">
+              <div class="profile-container">
+                <img src="assets/img/woods-profile.jpeg" alt="Profile" class="profile-img">
               </div>
-              <img src="assets/img/rlp-logo.png" alt="Royal LePage" style="width: 140px; margin-top: 0px;">
+              <img src="assets/img/rlp-logo.png" alt="Royal LePage" class="logo-img">
             </div>
 
-            <h1 class="sitename mb-0" style="font-size: 32px; font-weight: 600; color: #000; margin-top: 15px;">
+            <h1 class="sitename mb-0">
               Charlene In The City <br>
-              <span style="color: #e91e63;">Real Estate</span><br><br>
-              <div style="font-size: 18px; line-height: 1.2; margin-top: 2px;">
+              <span>Real Estate</span><br><br>
+              <div class="slogan">
                 <div>Neighbour.</div>
                 <div>Negotiator.</div>
                 <div>Navigator.</div>
               </div>
             </h1>
+
 
 
           </a>
