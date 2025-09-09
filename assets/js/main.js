@@ -142,3 +142,13 @@
   new PureCounter();
 
 })();
+
+const sliderWrapper = document.getElementById("real-estate-slider");
+
+// Loop through 1 → 22 and create a slide for each image
+for (let i = 1; i <= 21; i++) {
+  const slide = document.createElement("div");
+  slide.classList.add("swiper-slide");
+  slide.innerHTML = `<img src="assets/img/c${i}.jpg" alt="Property Image ${i}">`;
+  sliderWrapper.appendChild(slide);
+}

@@ -1764,11 +1764,6 @@ section,
   padding-bottom: 20px !important;
 }
 
-/* .hide-on-scroll-down {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-} */
-
 /* Base styling */
 #sticky-header {
   position: fixed;
@@ -1927,31 +1922,6 @@ section,
   text-align: center;
 }
 
-/* Testimonials Section Specific Styling */
-.testimonials .swiper-wrapper {
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 1200px) {
-  .testimonials .swiper-slide {
-    max-width: calc(33.333% - 10px);
-    width: auto;
-    flex-shrink: 0;
-    flex-grow: 0;
-  }
-}
-
-@media (max-width: 1199px) {
-  .testimonials .swiper-slide {
-    width: 100% !important;
-  }
-}
-
-.testimonials .testimonial-item {
-  text-align: center;
-}
-
 /* Real Estate "See More" Button (Larger & Shifted Left within its card) */
 .btn-see-more-lg {
   font-family: var(--heading-font, sans-serif);
@@ -1961,7 +1931,8 @@ section,
   transition: 0.5s;
   cursor: pointer;
   border-radius: 50px;
-  margin-bottom: 175px;
+  margin-top: 30px;
+  margin-bottom: 121px;
   margin-right: 0px;
 
   font-size: 20px;
@@ -1969,7 +1940,7 @@ section,
 
   background-color: transparent;
   border: 2px solid #d41c66;
-  color: #ffffff;
+  color: black;
 }
 
 .btn-see-more-lg:hover {
@@ -2203,7 +2174,7 @@ section,
 
 @media screen and (max-width: 768px) {
   .main {
-    padding-top: 15px;
+    padding-top: 0px;
     /* smaller header on mobile */
   }
 }
@@ -2246,3 +2217,35 @@ section,
     /* optional: reduce spacing */
   }
 }
+
+#real-estate-slider .swiper-slide img {
+  width: 100%;
+  max-width: 1500px;   /* sets the width */
+  height: auto;         /* keeps original aspect ratio */
+  aspect-ratio: 2 / 1;  /* optional: ensures 1500x750 ratio */
+  object-fit: contain;    /* crops slightly if needed to fill the aspect ratio */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  #sticky-header .d-flex > div {
+    font-size: 9px; /* smaller text */
+  }
+
+  #sticky-header .d-flex > div:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 columns */
+    grid-gap: 2px;                          /* space between icons */
+  }
+
+  #sticky-header .d-flex > div:last-child i {
+    font-size: 10px; /* smaller icons */
+  }
+
+  #sticky-header a {
+    line-height: 1.2; /* adjust spacing between lines */
+  }
+}
+
