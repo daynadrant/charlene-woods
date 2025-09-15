@@ -2228,11 +2228,21 @@ section,
   margin: 0 auto;
 }
 
+.header-graphics {
+  width: 500px; 
+  height: 217px
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   #sticky-header .d-flex > div {
     font-size: 9px; /* smaller text */
   }
+
+  .header-graphics {
+  width: 250px; 
+  height: 109px
+}
 
   #sticky-header .d-flex > div:last-child {
     display: grid;
