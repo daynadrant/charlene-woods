@@ -1133,10 +1133,8 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
-.features .features-image {
-  position: relative;
-  min-height: 400px;
-}
+
+.features .features-image { position: relative; min-height: 400px; }
 
 .features .features-image img {
   position: absolute;
@@ -1146,6 +1144,18 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .features .features-image {
+    min-height: auto;   /* let height adjust naturally */
+  }
+  .features .features-image img {
+    position: relative; /* no absolute stretching */
+    width: 100%;
+    height: auto;       /* keep aspect ratio */
+    object-fit: contain; /* show whole image */
+  }
 }
 
 .features h3 {
@@ -1728,13 +1738,6 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
-
 .top-bar {
   background-color: #fff;
   font-size: 14px;
@@ -1869,7 +1872,7 @@ section,
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .member .pic {
     height: 180px;
     /* Adjust image height for mobile */
@@ -2201,61 +2204,60 @@ section,
 /* Default for desktop */
 .neighbourhood-img {
   width: 350px;
+  max-width: 100%;
   /* same as before, but flexible */
   height: 200px;
   /* keeps aspect ratio */
-  margin-top: -20px;
+  margin-top: -10px;
   margin-bottom: 10px;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-  .neighbourhood-img {
-    max-width: 100%;
-    /* never exceed container */
-    margin-top: -10px;
-    /* optional: reduce spacing */
-  }
 }
 
 #real-estate-slider .swiper-slide img {
   width: 100%;
-  max-width: 1500px;   /* sets the width */
-  height: auto;         /* keeps original aspect ratio */
-  aspect-ratio: 2 / 1;  /* optional: ensures 1500x750 ratio */
-  object-fit: contain;    /* crops slightly if needed to fill the aspect ratio */
+  max-width: 1500px;
+  /* sets the width */
+  height: auto;
+  /* keeps original aspect ratio */
+  aspect-ratio: 2 / 1;
+  /* optional: ensures 1500x750 ratio */
+  object-fit: contain;
+  /* crops slightly if needed to fill the aspect ratio */
   display: block;
   margin: 0 auto;
 }
 
 .header-graphics {
-  width: 500px; 
+  width: 500px;
   height: 217px
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-  #sticky-header .d-flex > div {
-    font-size: 9px; /* smaller text */
+  #sticky-header .d-flex>div {
+    font-size: 9px;
+    /* smaller text */
   }
 
   .header-graphics {
-  width: 250px; 
-  height: 109px
-}
-
-  #sticky-header .d-flex > div:last-child {
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* 2 columns */
-    grid-gap: 2px;                          /* space between icons */
+    width: 250px;
+    height: 109px
   }
 
-  #sticky-header .d-flex > div:last-child i {
-    font-size: 10px; /* smaller icons */
+  #sticky-header .d-flex>div:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* 2 columns */
+    grid-gap: 2px;
+    /* space between icons */
+  }
+
+  #sticky-header .d-flex>div:last-child i {
+    font-size: 10px;
+    /* smaller icons */
   }
 
   #sticky-header a {
-    line-height: 1.2; /* adjust spacing between lines */
+    line-height: 1.2;
+    /* adjust spacing between lines */
   }
 }
-
