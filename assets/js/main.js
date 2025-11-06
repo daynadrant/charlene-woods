@@ -146,9 +146,9 @@
 const sliderWrapper = document.getElementById("real-estate-slider");
 
 // Loop through 1 → 22 and create a slide for each image
-for (let i = 1; i <= 21; i++) {
+for (let i = 1; i <= 33; i++) {
   const slide = document.createElement("div");
   slide.classList.add("swiper-slide");
-  slide.innerHTML = `<img src="assets/img/logan/e12438955_${i}.jpg" alt="Property Image ${i}">`;
+  slide.innerHTML = `<img src="assets/img/lazio/w12515864_${i}.jpg" alt="Property Image ${i}">`;
   sliderWrapper.appendChild(slide);
 }
