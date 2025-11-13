@@ -1,11 +1,3 @@
-/**
-* Template Name: EstateAgency
-* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-* Updated: Aug 09 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -134,7 +126,33 @@
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  // window.addEventListener("load", initSwiper);
+  window.addEventListener("load", () => {
+  // Inject slides for first slider
+  const sliderWrapper = document.getElementById("real-estate-slider");
+  if (sliderWrapper) {
+    for (let i = 1; i <= 33; i++) {
+      const slide = document.createElement("div");
+      slide.classList.add("swiper-slide");
+      slide.innerHTML = `<img src="assets/img/lazio/w12515864_${i}.jpg" alt="Property Image ${i}">`;
+      sliderWrapper.appendChild(slide);
+    }
+  }
+
+  // Inject slides for second slider
+  const sliderWrapper2 = document.getElementById("real-estate-slider-2");
+  if (sliderWrapper2) {
+    for (let i = 30; i >=1; i--) {
+      const slide = document.createElement("div");
+      slide.classList.add("swiper-slide");
+      slide.innerHTML = `<img src="assets/img/malcolm/L3RycmViL2xpc3RpbmdzLzQyLzUwLzQ3LzcyL3Av${i}.jpg" alt="New Property Image ${i}">`;
+      sliderWrapper2.appendChild(slide);
+    }
+  }
+
+  // Then initialize Swiper
+  initSwiper();
+});
 
   /**
    * Initiate Pure Counter
@@ -143,12 +161,21 @@
 
 })();
 
-const sliderWrapper = document.getElementById("real-estate-slider");
+// const sliderWrapper = document.getElementById("real-estate-slider");
 
-// Loop through 1 → 22 and create a slide for each image
-for (let i = 1; i <= 33; i++) {
-  const slide = document.createElement("div");
-  slide.classList.add("swiper-slide");
-  slide.innerHTML = `<img src="assets/img/lazio/w12515864_${i}.jpg" alt="Property Image ${i}">`;
-  sliderWrapper.appendChild(slide);
-}
+// // Loop through 1 → 22 and create a slide for each image
+// for (let i = 1; i <= 33; i++) {
+//   const slide = document.createElement("div");
+//   slide.classList.add("swiper-slide");
+//   slide.innerHTML = `<img src="assets/img/lazio/w12515864_${i}.jpg" alt="Property Image ${i}">`;
+//   sliderWrapper.appendChild(slide);
+// }
+
+// const sliderWrapper2 = document.getElementById("real-estate-slider-2");
+
+// for (let i = 1; i <= 30; i++) {
+//   const slide = document.createElement("div");
+//   slide.classList.add("swiper-slide");
+//   slide.innerHTML = `<img src="assets/img/malcolm/L3RycmViL2xpc3RpbmdzLzQyLzUwLzQ3LzcyL3Av${i}.jpg" alt="New Property Image ${i}">`;
+//   sliderWrapper2.appendChild(slide);
+// }
