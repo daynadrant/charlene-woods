@@ -150,6 +150,16 @@
     }
   }
 
+  const sliderWrapper3 = document.getElementById("real-estate-slider-3");
+  if (sliderWrapper3) {
+    for (let i = 1; i <=39; i++) {
+      const slide = document.createElement("div");
+      slide.classList.add("swiper-slide");
+      slide.innerHTML = `<img src="assets/img/soudan/c12575468_${i}.jpg" alt="New Property Image ${i}">`;
+      sliderWrapper3.appendChild(slide);
+    }
+  }
+
   // Then initialize Swiper
   initSwiper();
 });
