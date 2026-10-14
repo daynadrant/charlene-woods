@@ -15,8 +15,6 @@ A multi-page real estate agent website for **Charlene In The City** ([charlenein
 | Privacy policy | `privacy-policy.html` |
 | Terms and conditions | `terms-conditions.html` |
 
-`malcolm.html` and `soudan.html` are additional pages, and `floorplan1.jpg` / `floorplan2.jpg` are floor plan images used by the property pages.
-
 ## Repo layout
 
 ```
@@ -39,10 +37,6 @@ No install needed. Open `index.html` in a browser, or serve the folder:
 python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
-
-## Contact form
-
-`forms/contact.php` is the template's stock handler. It expects the template's paid "PHP Email Form" library at `assets/vendor/php-email-form/php-email-form.php`, which is not included, and its recipient is still the placeholder `contact@example.com`. To make the form send mail, add that library (or replace the script with your own mailer) and set a real receiving address. See `forms/Readme.txt`.
 
 ## Credits
 
