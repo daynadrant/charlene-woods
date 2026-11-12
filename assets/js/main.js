@@ -126,43 +126,7 @@
     });
   }
 
-  // window.addEventListener("load", initSwiper);
-  window.addEventListener("load", () => {
-  // Inject slides for first slider
-  const sliderWrapper = document.getElementById("real-estate-slider");
-  if (sliderWrapper) {
-    for (let i = 1; i <= 33; i++) {
-      const slide = document.createElement("div");
-      slide.classList.add("swiper-slide");
-      slide.innerHTML = `<img src="assets/img/lazio/w12515864_${i}.jpg" alt="Property Image ${i}">`;
-      sliderWrapper.appendChild(slide);
-    }
-  }
-
-  // Inject slides for second slider
-  const sliderWrapper2 = document.getElementById("real-estate-slider-2");
-  if (sliderWrapper2) {
-    for (let i = 30; i >=1; i--) {
-      const slide = document.createElement("div");
-      slide.classList.add("swiper-slide");
-      slide.innerHTML = `<img src="assets/img/malcolm/L3RycmViL2xpc3RpbmdzLzQyLzUwLzQ3LzcyL3Av${i}.jpg" alt="New Property Image ${i}">`;
-      sliderWrapper2.appendChild(slide);
-    }
-  }
-
-  const sliderWrapper3 = document.getElementById("real-estate-slider-3");
-  if (sliderWrapper3) {
-    for (let i = 1; i <=39; i++) {
-      const slide = document.createElement("div");
-      slide.classList.add("swiper-slide");
-      slide.innerHTML = `<img src="assets/img/soudan/c12575468_${i}.jpg" alt="New Property Image ${i}">`;
-      sliderWrapper3.appendChild(slide);
-    }
-  }
-
-  // Then initialize Swiper
-  initSwiper();
-});
+  window.addEventListener("load", initSwiper);
 
   /**
    * Initiate Pure Counter
@@ -170,22 +134,3 @@
   new PureCounter();
 
 })();
-
-// const sliderWrapper = document.getElementById("real-estate-slider");
-
-// // Loop through 1 → 22 and create a slide for each image
-// for (let i = 1; i <= 33; i++) {
-//   const slide = document.createElement("div");
-//   slide.classList.add("swiper-slide");
-//   slide.innerHTML = `<img src="assets/img/lazio/w12515864_${i}.jpg" alt="Property Image ${i}">`;
-//   sliderWrapper.appendChild(slide);
-// }
-
-// const sliderWrapper2 = document.getElementById("real-estate-slider-2");
-
-// for (let i = 1; i <= 30; i++) {
-//   const slide = document.createElement("div");
-//   slide.classList.add("swiper-slide");
-//   slide.innerHTML = `<img src="assets/img/malcolm/L3RycmViL2xpc3RpbmdzLzQyLzUwLzQ3LzcyL3Av${i}.jpg" alt="New Property Image ${i}">`;
-//   sliderWrapper2.appendChild(slide);
-// }

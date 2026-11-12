@@ -32,7 +32,6 @@ Listings are not stored in this repo. They come from a separate **WordPress** si
 Things to know:
 
 - To change how listings look, what's shown or how they're filtered, edit the WordPress site (RealtyPress settings and templates). Editing this repo won't change them.
-- The iframe points at Bluehost's temporary domain (`rfp.htc.mybluehost.me`). If that site is moved to a permanent domain or the temporary address changes, update the `src` in `properties.html` or the Properties page will go blank.
 - MLS® data is subject to TRREB and CREA rules. The required disclaimers live on the Terms and conditions page and in the footers of the other pages. Keep them in place.
 
 ## Google Analytics
@@ -59,8 +58,6 @@ The "RLP Signature TRREB Stats" section on the Services page is plain HTML, upda
 
 The form on `contact.html` posts to [Formspree](https://formspree.io), which emails the submissions. To change where they go, update the form's endpoint or the recipient in the Formspree dashboard.
 
-`forms/contact.php` is a leftover stub from the template and isn't used. It also depends on the template's paid PHP mailer library, which isn't included.
-
 ## Repo layout
 
 ```
@@ -70,9 +67,8 @@ privacy-policy.html, terms-conditions.html     the pages
 assets/
   css/main.css      site styles
   js/main.js        site scripts
-  img/              photos, logos and graphics
+  img/              photos, logos and graphics used on the pages
   vendor/           third-party libraries (Bootstrap, AOS, Swiper, etc.)
-forms/              unused template contact form stub
 CNAME               custom domain (charleneinthecity.ca)
 ```
 
