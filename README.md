@@ -13,7 +13,7 @@ The site has two parts that work together:
 | --- | --- | --- |
 | Home | `index.html` | Hero, neighbourhood highlights, "View Listings" button |
 | About | `about.html` | |
-| Services | `services.html` | Includes the monthly **Market Report** (see below) |
+| Services | `services.html` | Includes the monthly Market Report|
 | Properties | `properties.html` | Embeds the live listings |
 | Contact | `contact.html` | Contact form and map |
 | Privacy policy | `privacy-policy.html` | |
@@ -29,14 +29,9 @@ Listings are not stored in this repo. They come from a separate **WordPress** si
 <iframe src="https://rfp.htc.mybluehost.me/listings/" ...></iframe>
 ```
 
-Things to know:
-
-- To change how listings look, what's shown or how they're filtered, edit the WordPress site (RealtyPress settings and templates). Editing this repo won't change them.
-- MLS® data is subject to TRREB and CREA rules. The required disclaimers live on the Terms and conditions page and in the footers of the other pages. Keep them in place.
-
 ## Google Analytics
 
-Every page is tagged with **Google Analytics 4** (measurement ID `G-38BRF7Z8TE`). The standard `gtag.js` snippet sits at the top of each page's `<head>`:
+Every page is tagged with **Google Analytics 4**. The standard `gtag.js` snippet sits at the top of each page's `<head>`:
 
 ```html
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-38BRF7Z8TE"></script>
@@ -48,15 +43,12 @@ Every page is tagged with **Google Analytics 4** (measurement ID `G-38BRF7Z8TE`)
 </script>
 ```
 
-Page views, traffic sources and visitor behaviour are reported in the linked Google Analytics property. When you add a new page, copy this snippet into its `<head>` so it's tracked too. The privacy policy mentions Google Analytics.
+Page views, traffic sources and visitor behaviour are reported in the linked Google Analytics property. The privacy policy mentions Google Analytics.
 
-## Monthly market report
-
-The "RLP Signature TRREB Stats" section on the Services page is plain HTML, updated by hand each month. To update it, open `services.html`, find the `Market Report` heading, and replace the title (for example "October 2026") and the bullet points with the latest report.
 
 ## Contact form
 
-The form on `contact.html` posts to [Formspree](https://formspree.io), which emails the submissions. To change where they go, update the form's endpoint or the recipient in the Formspree dashboard.
+The form on `contact.html` posts to [Formspree](https://formspree.io), which emails the submissions.
 
 ## Repo layout
 
