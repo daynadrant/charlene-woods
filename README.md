@@ -48,7 +48,17 @@ Page views, traffic sources and visitor behaviour are reported in the linked Goo
 
 ## Contact form
 
-The form on `contact.html` posts to [Formspree](https://formspree.io), which emails the submissions.
+The form on `contact.html` posts to [Formspree](https://formspree.io), which emails the submissions. A hidden `_gotcha` field acts as a spam trap: people never see it, bots tend to fill it in, and Formspree drops those submissions. Formspree is disclosed as a third-party service in the privacy policy.
+
+## Search and sharing
+
+- Every page has its own meta description, canonical URL and Open Graph / Twitter tags, which control how it appears in search results and in link previews. The preview image is `assets/img/share.jpg`.
+- `index.html` also carries structured data (schema.org `RealEstateAgent`) describing the business.
+- `sitemap.xml` and `robots.txt` are for search engines. When you add a page, add it to `sitemap.xml` too.
+
+## Images
+
+Images are WebP, sized to about twice the size they're displayed at, and the ones below the fold use `loading="lazy"`. Keep new images to a few hundred KB at most (resize before uploading) so pages stay fast on phones.
 
 ## Repo layout
 
@@ -61,6 +71,8 @@ assets/
   js/main.js        site scripts
   img/              photos, logos and graphics used on the pages
   vendor/           third-party libraries (Bootstrap, AOS, Swiper, etc.)
+sitemap.xml         pages listed for search engines
+robots.txt          search engine rules, points to the sitemap
 CNAME               custom domain (charleneinthecity.ca)
 ```
 
